@@ -1,0 +1,47 @@
+.app {
+  text-align: center;
+  background-color: #282c34;
+  min-height: 100dvh;
+  min-width: 100dvw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.clock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 5em;
+}
+
+/*.Informations {*/
+/*  display: flex;*/
+/*  flex-direction: column;*/
+/*  align-items: center;*/
+/*  justify-content: center;*/
+/*  font-size: 1em;*/
+/*}*/
+
+.information > p {
+  margin: 0;
+}
+
+.reset-button {
+  /* top right of the screen */
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1em;
+    padding: 0.5em;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: #282c34;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+}
