@@ -28,7 +28,9 @@ function App() {
         localStorage.setItem('time', time.toString());
         // console.log(new Date(time).getHours());
         if (new Date(time).getHours() >= 21) {
-            setTime(new Date(time).setHours(0));
+            // setTime(new Date(time).setHours(0));
+            // set the time to 0:00:00 of the next day
+            setTime(new Date(time).setHours(0, 0, 0, 0) + 24 * 60 * 60 * 1000);
             setOffset(prevOffset => prevOffset + 3);
         }
     }, [time])
@@ -75,6 +77,9 @@ function App() {
                 </p>
                 <p>
                     Real time: {displayDate(new Date())} {displayTime(new Date())}
+                </p>
+                <p>
+                    Offset time: {displayDate()} {displayTime()}
                 </p>
             </div>}
         </div>
